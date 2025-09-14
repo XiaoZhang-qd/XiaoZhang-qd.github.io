@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kali for iOS</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 20px;
+            /* 添加以下样式使内容居中 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        /* 添加容器样式，用于控制内容最大宽度和自适应 */
+        .content-container {
+            width: 90%;
+            max-width: 1200px;
+        }
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        h2 {
+            color: #3498db;
+            margin-top: 25px;
+        }
+        p {
+            margin-bottom: 15px;
+        }
+        a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        mark {
+            display: block;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            /* 移除内联样式中的宽度设置，使用容器控制 */
+        }
+        ul, ol {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        pre {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 4px;
+            overflow-x: auto;
+        }
+        code {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        img {
+            /* 修改图片最大宽度为100%，使其自适应容器 */
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="content-container">
+        <h1>iSH-Kali的安装脚本</h1>
+        <p>这是iSH-Kali的安装脚本，用于在iSH中安装Kali Linux。</p>
+        <p>项目地址：<a href="https://github.com/XiaoZhang-qd/iSH-Kali">https://github.com/XiaoZhang-qd/iSH-Kali</a></p>
+        <mark>
+            <h1>iSH-Kali-install</h1>
+
+            <h2>项目简介</h2>
+            <p><strong>iSH-Kali-install</strong> 是一个专为iOS/iPadOS上的iSH应用设计的Kali Linux安装脚本，让您能够在iOS设备上便捷地安装和使用Kali Linux环境。</p>
+
+            <p style="text-align: center;"><img src="https://www.kali.org/images/kali-logo.svg" alt="Kali Linux Logo"></p>
+
+            <h2>项目信息</h2>
+            <ul>
+                <li><strong>项目作者</strong>: XiaoZhang-qd</li>
+                <li><strong>项目地址</strong>: <a href="https://github.com/XiaoZhang-qd/iSH-Kali">https://github.com/XiaoZhang-qd/iSH-Kali</a></li>
+                <li><strong>脚本版本</strong>: 1.0</li>
+                <li><strong>适用平台</strong>: iOS/iPadOS 设备运行的 iSH 应用</li>
+                <li><strong>脚本大小</strong>: 20KB</li>
+                <li><strong>更新频率</strong>: 随缘更新</li>
+                <li><strong>脚本依赖</strong>: bash</li>
+            </ul>
+
+            <h2>设备与软件要求</h2>
+            <ul>
+                <li><strong>设备</strong>: iPhone 12/iPad Pro 2018及以上机型</li>
+                <li><strong>软件</strong>: 必须安装iSH应用</li>
+                <li><strong>系统</strong>: iOS/iPadOS 14及以上版本</li>
+                <li><strong>存储</strong>: 至少7GB可用空间</li>
+                <li><strong>网络</strong>: 需要连接互联网以下载必要文件</li>
+                <li><strong>权限</strong>: 需要root权限（iSH默认提供）</li>
+                <li><strong>注意事项</strong>: 请确保iSH应用已开启后台运行模式</li>
+            </ul>
+
+            <h2>功能特性</h2>
+            <ul>
+                <li>一键安装Kali Linux环境</li>
+                <li>支持多种安装选项组合</li>
+                <li>自动设置脚本权限</li>
+                <li>提供ASCII艺术图标显示</li>
+                <li>脚本版本检查与自动更新</li>
+                <li>安装iSH-Tools工具集</li>
+                <li>支持快捷指令工具</li>
+            </ul>
+
+            <h2>安装准备</h2>
+            <ol>
+                <li>在App Store下载并安装<strong>iSH</strong>应用</li>
+                <li>打开iSH应用，等待初始化完成</li>
+                <li>确保您的设备已连接到稳定的网络</li>
+                <li>在iOS设置中开启iSH的后台运行权限
+                    <ul>
+                        <li>设置 → 隐私与安全性 → 定位服务 → iSH → 设置为"始终"</li>
+                    </ul>
+                </li>
+                <li>下载此脚本到您的设备</li>
+            </ol>
+
+            <h2>安装步骤</h2>
+            <ol>
+                <li>在iSH中，通过wget或curl运行安装脚本
+                    <pre><code>sudo bash "$(curl -fsSL https://raw.githubusercontent.com/XiaoZhang-qd/iSH-Kali/main/iSH-Kali-install.sh)"</code></pre>
+                    或者
+                    <pre><code>sudo bash "$(wget -O - https://raw.githubusercontent.com/XiaoZhang-qd/iSH-Kali/main/iSH-Kali-install.sh)"</code></pre>
+                </li>
+            </ol>
+
+            <p>脚本将自动执行安装过程，包括下载Kali Linux镜像、安装依赖软件包、配置环境等。</p>
+            <p>安装完成后，您可以在iSH应用中启动Kali Linux环境。</p>
+            <p>首次启动时，系统会要求您设置root密码。请根据提示输入密码并确认。</p>
+            <p>完成后，您可以使用<code>kali</code>用户名和您设置的密码登录Kali Linux环境。</p>
+            <p>登录后，您可以使用<code>startkali</code>命令启动Kali Linux环境。</p>
+            <p>您也可以使用<code>stopkali</code>命令停止Kali Linux环境。</p>
+            <p>若要更新脚本到最新版本，请运行<code>updatekali</code>命令。</p>
+            <p>若要卸载脚本，请运行<code>uninstallkali</code>命令。</p>
+            <p>卸载时，脚本会提示确认操作。请输入<code>y</code>确认卸载。</p>
+            <p>卸载完成后，您可以删除脚本文件。</p>
+            <p>若要重新安装脚本，请重复以上步骤。</p>
+            <p>注意：卸载脚本时，会删除Kali Linux环境和相关配置。请确保您已备份重要数据。</p>
+        </mark>
+    </div>
+</body>
+</html>
