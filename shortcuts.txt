@@ -1,0 +1,5 @@
+JIT 工具：
+JitStreamer Pair: https://www.icloud.com/shortcuts/eaaa8f45143e4fa1b543ecc34d882f4c
+JitStreamer EB 0.2.5: https://www.icloud.com/shortcuts/0f1731ce210d40fc8abd38df77529f16
+
+iSH-API (需要python3运行环境，运行后再开启）: https://www.icloud.com/shortcuts/1e38cb88fa8c4534987ef38c038f0559
